@@ -4,6 +4,7 @@ import com.mycompany.javafxapp.practicas.Practica1;
 import com.mycompany.javafxapp.practicas.Practica2;
 import com.mycompany.javafxapp.practicas.Practica3;
 import com.mycompany.javafxapp.practicas.Practica4;
+import com.mycompany.javafxapp.practicas.Practica5;
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -46,8 +47,15 @@ public class App extends Application {
             try { new Practica4().start(new Stage()); }
             catch (Exception ex) { ex.printStackTrace(); }
 });
+        
+        Button btnPractica5 = new Button("Práctica 5 - Imitador");
+        btnPractica5.setPrefWidth(200);
+        btnPractica5.setOnAction(e -> {
+             try { new Practica5().start(new Stage()); }
+            catch (Exception ex) { ex.printStackTrace(); }
+});
 
-        VBox root = new VBox(15, titulo, btnPractica1, btnPractica2, btnPractica3, btnPractica4);
+        VBox root = new VBox(15, titulo, btnPractica1, btnPractica2, btnPractica3, btnPractica4, btnPractica5);
         root.setPadding(new Insets(30));
         root.setAlignment(Pos.CENTER);
 
