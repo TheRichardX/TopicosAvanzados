@@ -8,4 +8,6 @@ module com.mycompany.javafxapp {
     opens com.mycompany.javafxapp.practicas to javafx.fxml;
     exports com.mycompany.javafxapp;
     exports com.mycompany.javafxapp.practicas;
+    requires java.sql;
+    requires mysql.connector.j;
 }
