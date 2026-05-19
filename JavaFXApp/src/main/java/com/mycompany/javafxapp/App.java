@@ -2,6 +2,8 @@ package com.mycompany.javafxapp;
 
 import com.mycompany.javafxapp.practicas.Practica1;
 import com.mycompany.javafxapp.practicas.Practica2;
+import com.mycompany.javafxapp.practicas.Practica3;
+import com.mycompany.javafxapp.practicas.Practica4;
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -31,8 +33,21 @@ public class App extends Application {
             try { new Practica2().start(new Stage()); }
             catch (Exception ex) { ex.printStackTrace(); }
         });
+        
+        Button btnPractica3 = new Button("Práctica 3 - Películas");
+        btnPractica3.setPrefWidth(200);
+        btnPractica3.setOnAction(e -> {
+            try { new Practica3().start(new Stage()); }
+            catch (Exception ex) { ex.printStackTrace(); }
+});
+        Button btnPractica4 = new Button("Práctica 4 - Selector de Archivo");
+        btnPractica4.setPrefWidth(200);
+        btnPractica4.setOnAction(e -> {
+            try { new Practica4().start(new Stage()); }
+            catch (Exception ex) { ex.printStackTrace(); }
+});
 
-        VBox root = new VBox(15, titulo, btnPractica1, btnPractica2);
+        VBox root = new VBox(15, titulo, btnPractica1, btnPractica2, btnPractica3, btnPractica4);
         root.setPadding(new Insets(30));
         root.setAlignment(Pos.CENTER);
 
