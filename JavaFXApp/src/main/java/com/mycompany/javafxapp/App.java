@@ -6,6 +6,7 @@ import com.mycompany.javafxapp.practicas.Practica3;
 import com.mycompany.javafxapp.practicas.Practica4;
 import com.mycompany.javafxapp.practicas.Practica5;
 import com.mycompany.javafxapp.practicas.Practica6;
+import com.mycompany.javafxapp.practicas.Practica7;
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -62,8 +63,15 @@ public class App extends Application {
             try { new Practica6().start(new Stage()); }
             catch (Exception ex) { ex.printStackTrace(); }
 });
+        
+        Button btnPractica7 = new Button("Práctica 7 - CRUD Encuesta");
+        btnPractica7.setPrefWidth(200);
+        btnPractica7.setOnAction(e -> {
+            try { new Practica7().start(new Stage()); }
+            catch (Exception ex) { ex.printStackTrace(); }
+});
 
-        VBox root = new VBox(15, titulo, btnPractica1, btnPractica2, btnPractica3, btnPractica4, btnPractica5, btnPractica6);
+        VBox root = new VBox(15, titulo, btnPractica1, btnPractica2, btnPractica3, btnPractica4, btnPractica5, btnPractica6, btnPractica7);
         root.setPadding(new Insets(30));
         root.setAlignment(Pos.CENTER);
 
