@@ -1,5 +1,6 @@
 package com.mycompany.javafxapp;
 
+import com.mycompany.javafxapp.practicas.Cronometro;
 import com.mycompany.javafxapp.practicas.Practica1;
 import com.mycompany.javafxapp.practicas.Practica2;
 import com.mycompany.javafxapp.practicas.Practica3;
@@ -70,8 +71,15 @@ public class App extends Application {
             try { new Practica7().start(new Stage()); }
             catch (Exception ex) { ex.printStackTrace(); }
 });
+        
+        Button btnCronometro = new Button("Cronómetro");
+        btnCronometro.setPrefWidth(200);
+        btnCronometro.setOnAction(e -> {
+            try { new Cronometro().start(new Stage()); }
+            catch (Exception ex) { ex.printStackTrace(); }
+});
 
-        VBox root = new VBox(15, titulo, btnPractica1, btnPractica2, btnPractica3, btnPractica4, btnPractica5, btnPractica6, btnPractica7);
+        VBox root = new VBox(15, titulo, btnPractica1, btnPractica2, btnPractica3, btnPractica4, btnPractica5, btnPractica6, btnPractica7, btnCronometro);
         root.setPadding(new Insets(30));
         root.setAlignment(Pos.CENTER);
 
