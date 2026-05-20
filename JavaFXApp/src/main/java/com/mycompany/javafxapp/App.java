@@ -8,6 +8,7 @@ import com.mycompany.javafxapp.practicas.Practica4;
 import com.mycompany.javafxapp.practicas.Practica5;
 import com.mycompany.javafxapp.practicas.Practica6;
 import com.mycompany.javafxapp.practicas.Practica7;
+import com.mycompany.javafxapp.practicas.ReproductorAudio;
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -79,7 +80,16 @@ public class App extends Application {
             catch (Exception ex) { ex.printStackTrace(); }
 });
 
-        VBox root = new VBox(15, titulo, btnPractica1, btnPractica2, btnPractica3, btnPractica4, btnPractica5, btnPractica6, btnPractica7, btnCronometro);
+        Button btnReproductor = new Button("Reproductor de Audio");
+        btnReproductor.setPrefWidth(200);
+        btnReproductor.setOnAction(e -> {
+            try { new ReproductorAudio().start(new Stage()); }
+            catch (Exception ex) { ex.printStackTrace(); }
+});
+
+        VBox root = new VBox(15, titulo, btnPractica1, btnPractica2, btnPractica3,
+                     btnPractica4, btnPractica5, btnPractica6, btnPractica7,
+                     btnCronometro, btnReproductor);
         root.setPadding(new Insets(30));
         root.setAlignment(Pos.CENTER);
 

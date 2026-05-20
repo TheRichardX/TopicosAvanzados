@@ -10,4 +10,5 @@ module com.mycompany.javafxapp {
     exports com.mycompany.javafxapp.practicas;
     requires java.sql;
     requires mysql.connector.j;
+    requires javafx.media;
 }
